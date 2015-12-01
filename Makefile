@@ -10,7 +10,7 @@ install-dev:
 install-js:
 	npm install
 build-js:
-	grunt
+	node_modules/grunt-cli/bin/grunt
 migrate:
 	${manage} migrate
 run:
@@ -18,6 +18,6 @@ run:
 shell:
 	${manage} shell
 test:
-	grunt test
+	node_modules/grunt-cli/bin/grunt
 	${manage} test
 dev-bootstrap: install-dev migrate install-js build-js createsuperuser
